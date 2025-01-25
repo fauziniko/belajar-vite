@@ -4,15 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>hello vite</title>
+    <style>
+        @import url('style.css');
+        @import url('sample.sass');
+    </style>
 </head>
 <body>
 <h1>hello vite oji</h1>
+<h2>support sass</h2>
 <script type="module">
     import {sayHello} from "./say-hello.js";
     import {sayGoodbye} from "./say-goodbye.ts";
+    import {v4} from "uuid";
+    import * as person from './person.json';
 
     sayHello('fauzi');
     sayGoodbye('niko');
+    console.info(v4());
+    console.info(person.name);
+    console.info(person.web);
 
 </script>
 </body>
